@@ -1,3 +1,3 @@
 Particle filtering for a simple stochastic volatility model with markov switching.
 
-Both SIR and Auxiliary Particle Filter are proposed.
+Both SIR and Auxiliary Particle Filter are proposed. It is possible to average the results of several simulation via the parameter "R".
