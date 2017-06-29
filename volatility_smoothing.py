@@ -218,8 +218,6 @@ def forward_aux_filter(m0, s0, path, T):
 
 def particle_smoother(m0, s0, path, T):
     p_forward = forward_aux_filter(m0, s0, path, T)
-    # p_backward = backward_filter(path, T)
-    smoothing_weights = []
     Xest = []
     for t in range(2, T, 1):
         p_f = p_forward[t - 1]
