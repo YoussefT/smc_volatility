@@ -14,7 +14,7 @@ R = 1
 Np = 200
 weight_limit = 1 / (Np ** 3.0)
 ess = 10.0 / Np
-nu = 1.0 / (2 ** Np)
+# nu = 1.0 / (2 ** Np)
 phi = 0.23
 sigma = 0.1
 vol = [-2.5, -0.5]
@@ -218,8 +218,6 @@ def forward_aux_filter(m0, s0, path, T):
 
 def particle_smoother(m0, s0, path, T):
     p_forward = forward_aux_filter(m0, s0, path, T)
-    # p_backward = backward_filter(path, T)
-    smoothing_weights = []
     Xest = []
     for t in range(2, T, 1):
         p_f = p_forward[t - 1]
